@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ng-cilck指令与ng-init初始化值</title>
+    <script src="../js/angular1.4.6.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script> -->
+</head>
+
+<body>
+    <h2>ng-init</h2>
+    <div ng-init="a=0;b=0;">
+        <input type="text" ng-model="a">*<input type="text" ng-model="b"><span>({{a}}*{{b}})=>{{a*b}}</span>
+        <br>
+        ps：v-bind会重绘整元素文本区域，最好使用{{}} 模板  {{}} 仅会改变{{}}区域内的内容
+    </div>
+    <h2>ng-click</h2>
+    <div>
+            <input type="" ng-model="n">
+            <button ng-click="n=n+1">+1</button>
+    </div>
+    <h2>小结</h2>
+    <dl>
+        <dt>1. Angular</dt>
+        <dd>MV*——数据、表现分离</dd>
+        <dd>减轻程序员的负担，减少重复劳动</dd>
+        <dd>扩展了HTMl的功能：颠覆性、可扩展</dd>
+        <dt>2. 基本使用</dt>
+        <dd>MVC</dd>
+        <dd>M : Model 模型——数据</dd>
+        <dd>V : View  视图——表现层</dd>
+        <dd>C : Controller 控制器——业务逻辑</dd>
+        <dd>ng-app="" : Angular的范围</dd>
+        <dt>两个词</dt>
+        <dd>双向绑定</dd>
+        <dd>依赖注入</dd>
+        <dt>饭店：</dt>
+        <dd>函数——参数由调用方决定</dd>
+        <dd>依赖注入——参数由定义方决定</dd>
+        <dt>重点</dt>
+        <dd>1. angular和JavaScript不互通</dd>
+        <dd>2. Angular的开发模式和传统开发模式不同——只需要顶住数据</dd>
+        <dd>3. 数据是核心 ng-开头</dd>
+       <strong>
+            Angular接管了UI
+       </strong>
+       <dt>
+           Angular 与JavaScript互通  需要经过Controller
+       </dt>
+       <dt>AngularJs；MVx框架 把数据、表现、逻辑分离开</dt>
+       <dd> 方便程序员——避免重复劳动（获取、事件）</dd>  
+       <dd>ng-model 数据源 双向绑定</dd>
+       <dd>ng-bind 输出数据</dd>
+       <dd>ng-app 范围 </dd>
+       
+       <dd>{{}}  模板</dd>
+<strong>   1.angular与javascript 不互通 </strong>
+       <strong> 2.顶住数据</strong>
+      
+<p>
+        ng-cilck 点击事件</p><p>
+                ng-init 初始化数据</p>
+
+
+    </dl>
+</body>
+
+</html>

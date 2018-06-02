@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ng-model双向数据绑定</title>
+    <script src="../js/angular1.4.6.js"></script>
+</head>
+<body>
+    <h2>手写双向数据绑定</h2>
+    <div class="box">
+        <input type="text" id="model">
+        <br>
+        <span id="bind"></span>
+    </div>
+    <h2>Angular.js中使用ng-model进行数据双向绑定</h2>
+    <input type="text" ng-model="a">
+    <br>
+    <span ng-bind="a"></span>
+    <script>
+        model=document.getElementById("model");
+        bind=document.getElementById("bind");
+        
+        window.onload=function(){
+            model.oninput=function(){
+                bind.innerHTML=model.value;
+            }
+        }
+
+    </script>
+</body>
+</html>
