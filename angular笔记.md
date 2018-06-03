@@ -1,0 +1,69 @@
+1、MVX:数据、表现、逻辑分离；
+2、Angular 以M（model数据）V（view视图/表现层）C（controller控制器/业务逻辑）为基础；降低程序员重复工作的劳动量。扩展了HTML功能，颠覆传统JS开发，可扩展。
+3、基本使用：ng-app=“”  AngularJS掌管的范围
+4、双向绑定（ng-model可实现双向绑定）；依赖注入：参数由定义方决定。
+5、函数：参数由调用方决定。
+6、模版：｛｛XXX｝｝ 比ng-bind更灵活。求和不同
+--------------------------------------------------------------
+①AngularJS和普通的javascript不互通（
+日常函数不互通，变量也不互通，事件也不互通
+）。（可以打通使用controller）
+②Angular的开发模式和传统开发模式完全不同——只需要盯住数据（数据是核心）。
+--------------------------------------------------------------
+7、AngularJS中所有都是用ng-开头
+8、AngularJS接管了UI。
+9、ng-init:初始化数据。
+10、AngularJS也有自己的事件（ng-init、ng-click）
+11、重复生成东西（no-reapt）
+
+与后台信息交互：
+1、
+$http.get(url,参数).success(function(){}).error(function(){});
+$http.post(url,参数).then(function(){
+success的回掉函数
+},function(){
+error的回掉函数
+});
+2、后端返回数据越少越好，节约流量，节约带宽，降低服务器性能压力。
+3、数组.push()把数据加到最后面，unshift()加输入到最前面。pop()删除数组最后一条数据。
+********************************************************
+****AngularJS一直都在操作数据，不直接操作document。****
+1.Angular 比vue更重一些
+2.ng-repeat 循环
+3.Controller 控制器，逻辑代码放到控制器中，
+3.1.放代码
+3.2.桥梁
+3.3.模块化
+4.一个页面中可以有多个controller
+5.scope
+6.一个module中可以有多个controller
+7.filter 过滤器
+8.ng-src 图片地址
+9.ng-href 添加地址
+10. ng-clack 延迟加载
+1 ng-app="xx"
+2 ng-controller="xxx"
+
+ var app=angular.module("app-name",[]);
+     app.controller("controller-name",function($scope,$http) {}
+)
+
+3 ng-model 数据双向绑定
+   $scope.变量；
+   $scope.函数；
+
+    ng-repeat="xxx in 数组名///json名"
+
+    ng-show/////ng-hide;
+
+对数据的操作。dom会根据自己操作的数据去展现。
+1.ng-app ng开头是angular的标志 范围
+2.ng-model 数据源，双向绑定
+3.ng-bind 全部替换|输出
+模板{{}}比ng-bind 更灵活 
+4.angular 和 javascript不互通
+函数不互通，变量也不互通，事件也不互通
+Angular的开发模式和传统开发模式完全不同--只需要盯住数据，数据是核心
+5.ng-click 点击事件
+6.ng-init 初始化
+7.angular是一个MVX框架，把数据表现，逻辑，数据分离开
