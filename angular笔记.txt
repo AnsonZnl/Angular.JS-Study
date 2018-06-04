@@ -5,10 +5,10 @@
 5、函数：参数由调用方决定。
 6、模版：｛｛XXX｝｝ 比ng-bind更灵活。求和不同
 --------------------------------------------------------------
-①AngularJS和普通的javascript不互通（
+AngularJS和普通的javascript不互通（
 日常函数不互通，变量也不互通，事件也不互通
 ）。（可以打通使用controller）
-②Angular的开发模式和传统开发模式完全不同——只需要盯住数据（数据是核心）。
+Angular的开发模式和传统开发模式完全不同——只需要盯住数据（数据是核心）。
 --------------------------------------------------------------
 7、AngularJS中所有都是用ng-开头
 8、AngularJS接管了UI。
@@ -67,3 +67,12 @@ Angular的开发模式和传统开发模式完全不同--只需要盯住数据�
 5.ng-click 点击事件
 6.ng-init 初始化
 7.angular是一个MVX框架，把数据表现，逻辑，数据分离开
+-----------------
+$routeProvider.when(url,{
+    template:string, //在ng-view中插入简单的html内容
+    templateUrl:string, //在ng-view中插入html模版文件
+    controller:string,function / array, //在当前模版上执行的controller函数
+    controllerAs:string, //为controller指定别名
+    redirectTo:string,function, //重定向的地址
+    resolve:object<key,function> //指定当前controller所依赖的其他模块
+});
